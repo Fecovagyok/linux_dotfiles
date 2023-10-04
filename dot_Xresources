@@ -1,0 +1,26 @@
+xterm*faceName: Monospace
+xterm*faceSize: 13
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+*.background: #3b4252
+*.foreground: #d8dee9
+URxvt.font: xft:Monospace:size=11
+URxvt.geometry: 68x20
+URxvt.letterSpace: -1
+urxvt*depth: 32
+urxvt*background: [85]#0B1218
+urxvt.scrollBar: false
+
+Xft.dpi: 120
+
+! These might also be useful depending on your monitor and personal preference:
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+! blue
+*.color4: #2587cc
+*.color12: #2ca2f5

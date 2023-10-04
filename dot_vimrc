@@ -1,0 +1,73 @@
+set showcmd		" Show (partial) command in status line.
+set showmatch		" Show matching brackets.
+set ignorecase		" Do case insensitive matching
+"set smartcase		" Do smart case matching
+set incsearch		" Incremental search
+"set autowrite		" Automatically save before commands like :next and :make
+"set hidden		" Hide buffers when they are abandoned
+set mouse=a		" Enable mouse usage (all modes)
+set number
+
+syntax on
+filetype plugin indent on
+
+" Set tab width to 4 columns.
+set shiftwidth=4
+
+" Set tab width to 4 columns.
+set tabstop=4
+
+" Use space characters instead of tabs.
+set expandtab
+
+" Do not let cursor scroll below or above N number of lines when scrolling.
+set scrolloff=10
+
+" Use highlighting when doing a search
+set hlsearch
+
+" Enable auto completion menu after pressing TAB.
+set wildmenu
+
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest
+
+" Make no swapfile when opening files
+set noswapfile
+
+" My keybindings
+inoremap ff <Esc>
+nnoremap <space> :
+"nnoremap o o<esc>
+"nnoremap O O<esc>
+nnoremap <c-e> :w<cr>
+nnoremap q :q<cr>
+
+nnoremap <c-up> <c-w>k
+nnoremap <c-down> <c-w>j 
+nnoremap <c-left> <c-w>h
+nnoremap <c-right> <c-w>l
+nnoremap <c-.> <c-w>>
+nnoremap <TAB> :set cursorline!<CR>
+
+nnoremap <F4> :!perl %<CR>
+nnoremap <F5> :!gcc % -o main.out && ./main.out --ansi<CR>
+nnoremap <F3> :!./%<CR>
+nnoremap [ "
+vnoremap [ "
+nnoremap <c-k> <c-w>k
+nnoremap <c-j> <c-w>j 
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+cs add cscope.out
+    nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
+    nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
+
+
